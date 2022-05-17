@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Last Trial CONTACT US</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- My own CSS style, put all your customize CSS inside -->
+  <link href="master.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+</head>
+
+<body>
+
+  <a id="top"></a>
+
+  <!-- header -->
+  <header>
+    <a id="top"></a>
+    <section id="header_topbar">
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="menulist">
+          <li><a href="booking1.html">>>立即報名</a></li>
+          <li><a href="index.html#story">>>遊戲故事</a></li>
+          <li><a href="index.html#role intro">>>團隊角色</a>
+            <ul class="menulist">
+              <li><a href="rolesandprograms.html">//角色介紹</a></li>
+              <li><a href="rolesandprograms.html#programs">//相關課程內容</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#event details">>>活動詳情</a></li>
+          <li><a href="productionteam.html">>>設計團隊</a></li>
+          <li><a href="contactus.html">>>聯絡我們</a></li>
+        </ul>
+      </div>
+
+      <a href="index.html"><img id="header_iconmini" src="images/all_mini_logo.jpg" alt="logo"></a>
+      <a href="index.html"><img id="header_icon" src="images/all_logo.jpg" alt="logo"></a>
+      <div class="topnav">
+        <h1 id="header_title">//hello world</a>
+          <div class="topnav-right">
+            <ul>
+              <li class="header_menu"><a href="https://www.uowchk.edu.hk/" target="_blank"><img id="header_uowlogo" src="images/header_uowlogo.png" alt="uow website"></a></li>
+              <li class="header_menu"><a href="Booking1.html"><img id="header_booking" src="images/header_bookingicon.png" alt="booking"></a></li>
+              <li class="header_menu">
+                <div id="main">
+                  <button class="openbtn" onclick="openNav()">
+                    <img id="header_menu" src="images/header_menuicon.png" alt="menu">
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+
+      <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <div class="container">
+                <h4 class="navbar-text">>>密室逃脫報名</h4>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <div class="container">
+                <h4 class="navbar-text">人數</h4>
+                <div class="input-group spinner ">
+                  <input type="number" class="form-control " value="0" min="0" max="10" id="ticketnumber">
+                  <button class="btn btn-primary btn-1" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                      <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </button>
+                  <button class="btn btn-primary btn-2" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <div class="container">
+                <h4 class="navbar-text">日期</h4>
+                <p class="textdesign"><input type="text" id="datepicker"></p>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="container">
+                <h4 class="navbar-text">時段</h4>
+                <select class="form-select" aria-label="Default select example" id="time">
+                  <option selected></option>
+                  <option value="1030am-1130am">1030am-1130am</option>
+                  <option value="1200pm-1300pm">1200pm-1300pm</option>
+                  <option value="1330pm-1430pm">1330pm-1430pm</option>
+                  <option value="1500pm-1600pm">1500pm-1600pm</option>
+                </select>
+            </li>
+            <li class="nav-item">
+              <div class="container">
+                <button type="button" class="btn btn-primary" onClick="saveData()">快速報名</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+  </header>
+
+  <div class="backgroundimage">
+    <div class="textdesign">
+
+      <br>
+      <div class="container containerbeforefooter">
+        <br><br><br>
+        <h1 class="title"> >>聯絡我們</h1>
+        <br>
+        <div class="row">
+          <div class="col-lg-6">
+            <a href="tel:21234567">
+              <p> >> 電話: 21234567 </p>
+            </a>
+
+            <a href="mailto:thelasttrail@gmail.com">
+              <p> >> 電郵地址: thelasttrail@gmail.com </p>
+            </a>
+
+            <p><a href="https://www.instagram.com/uowchk.fst/" target="_blank">
+                <img class=medialogo src="images/all_ig.png" alt="ig logo"></a>
+              <a href="https://www.instagram.com/uowchk.fst/" target="_blank">
+                @thelasttrial.uowchk </a>
+            </p>
+
+            <p><a href="https://www.facebook.com/UOWCHKFST" target="_blank">
+                <img class=medialogo src="images/all_fb.png" alt="fb logo"></a>
+              <a href="https://www.facebook.com/UOWCHKFST" target="_blank">
+                The Last Trail </a>
+            </p>
+            <br>
+          </div>
+          <div class="col-lg-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.6041944388953!2d114.19070611519103!3d22.330804147429475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404072dc76effbf%3A0xd814591d42635154!2zVU9XIENvbGxlZ2UgSG9uZyBLb25nIOmmmea4r-S8jeWAq-iyouWtuOmZog!5e0!3m2!1szh-TW!2shk!4v1648987702078!5m2!1szh-TW!2shk"
+              width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <br>
+            <div class=mapfont>
+              <p> 1/F, Le Billionnaire, 46 Sa Po Road, Kowloon City, Hong Kong</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-light text-center text-lg-start">
+      <div id="footer_sitemap" class="container p-4">
+        <h2>>>網站地圖</h2>
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="footer_coltitle text-uppercase"><a href="index.html">主頁</a></h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="index.html#story" class="text-dark">遊戲故事</a>
+              </li>
+              <li>
+                <a href="index.html#role intro" class="text-dark">團隊角色</a>
+              </li>
+              <li>
+                <a href="index.html#event details" class="text-dark">活動詳情</a>
+              </li>
+              <li>
+                <a href="#top" class="text-dark">回到頂部</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="footer_coltitle text-uppercase mb-0"><a href="rolesandprograms.html">角色介紹及相關課程內容</a></h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="rolesandprograms.html" class="text-dark">角色介紹</a>
+              </li>
+              <li>
+                <a href="rolesandprograms.html#programs" class="text-dark">課程內容</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="footer_coltitle text-uppercase">關於我們</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="productionteam.html" class="text-dark">設計團隊</a>
+              </li>
+              <li>
+                <a href="contactus.html" class="text-dark">聯絡我們</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="footer_coltitle text-uppercase mb-0">報名方法</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="booking1.html" class="text-dark">選擇門票</a>
+              </li>
+              <li>
+                <a href="#top" class="text-dark">快速報名</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div id="footer_learnmore" class="container p-4">
+        <h2>>>了解更多</h2>
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h3>電話: <a href="tel:21234567" target="_blank">21234567</a></h3>
+              <a href="https://www.instagram.com/uowcollegehk/" target="_blank"><img id="footer_iglogo" src="images/all_ig.png" alt=”ig logo”></a>
+              <h4 class="footer_socialtext"><a href="https://www.instagram.com/uowcollegehk/" target="_blank">@thelasttrial.uowchk</a></h4>
+            </div>
+
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h3>電郵: <a href="mailto:thelasttrial@gmail.com" target="_blank">thelasttrial@gmail.com</a></h3>
+              <a href="https://www.facebook.com/UOWCHKFST/" target="_blank"><img id="footer_fblogo" src="images/all_fb.png" alt=”fb logo”></a>
+              <h4 class="footer_socialtext"><a href="https://www.facebook.com/UOWCHKFST/" target="_blank">人類最後的試煉 The Last Trial</a></h4>
+            </div>
+
+            <br>
+            <!-- Grid container -->
+            <div class="container p-4">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+
+                  <p>
+                    UOW College Hong Kong
+                    <br>
+                    1/F, Le Billionnaire, 46 Sa Po Road, Kowloon City, Hong Kong
+                    <br>
+                    Main campus - <a href="tel:27073111" target="_blank">2707 3111</a> / <a href="tel:27074669" target="_blank">2707 4669</a>
+                    <br>
+                    Telford campus - <a href="tel:27079440" target="_blank">2707 9440</a>
+                    <br>
+                    Email: <a href="mailto:uowchk-main@uow.edu.au" target="_blank">uowchk-main@uow.edu.au</a>
+                  </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+
+                  <p>
+                    University of Wollongong Australia
+                    UOW College Hong Kong is an organisation that supports, embraces and celebrates diverse cultures.
+                    <br>
+                    Copyright © 2022 University of Wollongong
+                    <br>
+                    Copyright © 2022 IGNITE STUDIO
+                    <br>
+                    Flat A113, Hong Kong Building, Kwai Chung, N.T., Hong Kong
+                  </p>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+  $("#datepicker").on("change", function() {
+    var date = $(this).val()
+    sessionStorage.setItem("datepicker", date);
+
+  });
+
+  $(function() {
+    $("#datepicker").datepicker();
+  });
+
+  function passvalues() {
+    var firstname = document.getElementById("txt").value;
+    localStorage.setItem("textvalue", firstname)
+    return false
+  }
+
+  function saveData() {
+    // var name = document.getElementById("datepicker").value;
+    var ticketnumber = document.getElementById("ticketnumber").value;
+    console.log(ticketnumber);
+    sessionStorage.setItem("ticketnumber", ticketnumber);
+
+    var time = document.getElementById("time").value;
+    console.log(time);
+    sessionStorage.setItem("time", time);
+
+    location.href = 'booking2.html';
+
+  }
+
+
+  (function($) {
+    $('.spinner .btn-1').on('click', function() {
+      if (parseInt($('.spinner input').val(), 10) > 0)
+        $('.spinner input').val(parseInt($('.spinner input').val(), 10) - 1);
+    });
+    $('.spinner .btn-2').on('click', function() {
+      $('.spinner input').val(parseInt($('.spinner input').val(), 10) + 1);
+    });
+  })(jQuery);
+
+  (function($) {
+    $('.spinner2 .btn-3').on('click', function() {
+      if (parseInt($('.spinner2 input').val(), 10) > 0)
+        $('.spinner2 input').val(parseInt($('.spinner2 input').val(), 10) - 1);
+    });
+    $('.spinner2 .btn-4').on('click', function() {
+      $('.spinner2 input').val(parseInt($('.spinner2 input').val(), 10) + 1);
+    });
+  })(jQuery);
+
+  (function($) {
+    $("#submit").on("click", function() {
+      var a = parseInt($('.spinner input').val());
+      var b = parseInt($('.spinner2 input').val());
+      var sum = a + b;
+      $('#sum').val(sum);
+
+    })
+  })(jQuery);
+</script>

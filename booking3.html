@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="master.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>booking2</title>
+  <style>
+    body {
+      background-image: url('images/all_background.jpg');
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container p-5 my-5 bg-light ">
+    <div class="container-fluid">
+      <h1>「The Last Trial 人類最後的試煉」</h1>
+      <h1 class="text">>>資料確定</h1>
+
+      <br>
+      <h4 class="text" id="ticket">門票數量/Number of tickets</h4>
+      <h4 class="text" id="date">遊玩當天日期/Date of the game day</h4>
+      <h4 class="text" id="time1">選擇遊玩時段/Period of game time</h4>
+      <h4 class="text" id="fname">英文名字/English name</h4>
+      <h4 class="text" id="lname"></h4>
+      <h4 class="text" id="phone1">聯絡電話/Phone number</h4>
+      <h4 class="text" id="mail">電郵地址/Email address</h4>
+      <br>
+
+      <h6 class="text"> *為避免不必要的糾紛或者問題請閣下將本頁面截圖或者紀錄</h6>
+
+      <!-- The Modal -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary" onClick="location.href='booking2.html'">上一頁</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">預約完成</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">>>至參加者們</h4>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          閣下已經預約完成!
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onClick="location.href='index.html'">上一頁</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <script type="text/javascript">
+      document.getElementById("result").innerHTML=localStorage.getitem("textvalue");
+    </script> -->
+
+
+
+
+  <script>
+    window.onload = function() {
+      //last name
+      let lname = sessionStorage.getItem("lastname");
+      //document.getElementById("lname").innerHTML = "英文姓氏: " + lname;
+
+      //first name
+      let fName = sessionStorage.getItem("firstname");
+      document.getElementById("fname").innerHTML = "  名字/name: " + lname + " " + fName;
+
+      //date
+      let date = sessionStorage.getItem("datepicker");
+
+      document.getElementById("date").innerHTML = "遊玩當天日期/Date of the game day: " + date;
+
+      //ticket
+      let ticket = sessionStorage.getItem("ticketnumber");
+
+      document.getElementById("ticket").innerHTML = "門票數量/Number of tickets: " + ticket;
+
+
+      //time
+      let time1 = sessionStorage.getItem("time");
+
+      document.getElementById("time1").innerHTML = "選擇遊玩時段/Period of game time: " + time1;
+
+      //mail
+      let mail = sessionStorage.getItem("email");
+
+      document.getElementById("mail").innerHTML = "電郵地址/Email address: " + mail;
+
+      //phone
+      let phone1 = sessionStorage.getItem("phone");
+
+      document.getElementById("phone1").innerHTML = "聯絡電話/Phone number: " + phone1;
+
+
+    }
+  </script>
+
+  <!-- footer -->
+  <footer class="bg-light text-center text-lg-start">
+    <div id="footer_sitemap" class="container p-4">
+      <h2>>>網站地圖</h2>
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer_coltitle text-uppercase"><a href="index.html">主頁</a></h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="index.html#story" class="text-dark">遊戲故事</a>
+            </li>
+            <li>
+              <a href="index.html#role intro" class="text-dark">團隊角色</a>
+            </li>
+            <li>
+              <a href="index.html#event details" class="text-dark">活動詳情</a>
+            </li>
+            <li>
+              <a href="#top" class="text-dark">回到頂部</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer_coltitle text-uppercase mb-0"><a href="rolesandprograms.html">角色介紹及相關課程內容</a></h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="rolesandprograms.html" class="text-dark">角色介紹</a>
+            </li>
+            <li>
+              <a href="rolesandprograms.html#programs" class="text-dark">課程內容</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer_coltitle text-uppercase">關於我們</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="productionteam.html" class="text-dark">設計團隊</a>
+            </li>
+            <li>
+              <a href="contactus.html" class="text-dark">聯絡我們</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer_coltitle text-uppercase mb-0">報名方法</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="booking1.html" class="text-dark">選擇門票</a>
+            </li>
+            <li>
+              <a href="#top" class="text-dark">快速報名</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div id="footer_learnmore" class="container p-4">
+      <h2>>>了解更多</h2>
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h3>電話: <a href="tel:21234567" target="_blank">21234567</a></h3>
+            <a href="https://www.instagram.com/uowcollegehk/" target="_blank"><img id="footer_iglogo" src="images/all_ig.png" alt=”ig logo”></a>
+            <h4 class="footer_socialtext"><a href="https://www.instagram.com/uowcollegehk/" target="_blank">@thelasttrial.uowchk</a></h4>
+          </div>
+
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h3>電郵: <a href="mailto:thelasttrial@gmail.com" target="_blank">thelasttrial@gmail.com</a></h3>
+            <a href="https://www.facebook.com/UOWCHKFST/" target="_blank"><img id="footer_fblogo" src="images/all_fb.png" alt=”fb logo”></a>
+            <h4 class="footer_socialtext"><a href="https://www.facebook.com/UOWCHKFST/" target="_blank">人類最後的試煉 The Last Trial</a></h4>
+          </div>
+
+          <br>
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+
+                <p>
+                  UOW College Hong Kong
+                  <br>
+                  1/F, Le Billionnaire, 46 Sa Po Road, Kowloon City, Hong Kong
+                  <br>
+                  Main campus - <a href="tel:27073111" target="_blank">2707 3111</a> / <a href="tel:27074669" target="_blank">2707 4669</a>
+                  <br>
+                  Telford campus - <a href="tel:27079440" target="_blank">2707 9440</a>
+                  <br>
+                  Email: <a href="mailto:uowchk-main@uow.edu.au" target="_blank">uowchk-main@uow.edu.au</a>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+
+                <p>
+                  University of Wollongong Australia
+                  UOW College Hong Kong is an organisation that supports, embraces and celebrates diverse cultures.
+                  <br>
+                  Copyright © 2022 University of Wollongong
+                  <br>
+                  Copyright © 2022 IGNITE STUDIO
+                  <br>
+                  Flat A113, Hong Kong Building, Kwai Chung, N.T., Hong Kong
+                </p>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Grid container -->
+
+  </footer>
+
+</body>
+
+</html>
