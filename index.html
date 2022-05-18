@@ -7,11 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="master.css" rel="stylesheet" type="text/css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <!-- custom -->
+  <link href="master.css" rel="stylesheet" type="text/css">
+  <script src="script.js"></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 </head>
 
 <body>
@@ -587,67 +590,64 @@
 </html>
 
 <script>
-$("#datepicker").on("change", function(){
-  var date =$(this).val()
-  sessionStorage.setItem("datepicker", date);
+  $("#datepicker").on("change", function() {
+    var date = $(this).val()
+    sessionStorage.setItem("datepicker", date);
 
-});
-
-$( function() {
-  $( "#datepicker" ).datepicker();
-} );
-
-function passvalues()
-{
-  var firstname=document.getElementById("txt").value;
-  localStorage.setItem("textvalue",firstname)
-  return false
-}
-
-function saveData(){
-  // var name = document.getElementById("datepicker").value;
-  var ticketnumber = document.getElementById("ticketnumber").value;
-  console.log(ticketnumber);
-  sessionStorage.setItem("ticketnumber", ticketnumber);
-
-  var time = document.getElementById("time").value;
-  console.log(time);
-  sessionStorage.setItem("time", time);
-
-  location.href='booking2.html';
-
-}
-
-
-(function ($) {
-  $('.spinner .btn-1').on('click', function() {
-    if(parseInt($('.spinner input').val(), 10) > 0)
-      $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
   });
-  $('.spinner .btn-2').on('click', function() {
-    $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
-  });
-})(jQuery);
 
-(function ($) {
-  $('.spinner2 .btn-3').on('click', function() {
-    if(parseInt($('.spinner2 input').val(), 10) > 0)
-      $('.spinner2 input').val( parseInt($('.spinner2 input').val(), 10) - 1);
+  $(function() {
+    $("#datepicker").datepicker();
   });
-  $('.spinner2 .btn-4').on('click', function() {
-    $('.spinner2 input').val( parseInt($('.spinner2 input').val(), 10) + 1);
-  });
-})(jQuery);
 
-(function ($) {
-       $("#submit").on("click", function(){
-        var a = parseInt($('.spinner input').val());
-        var b = parseInt($('.spinner2 input').val());
-        var sum = a + b;
-        $('#sum').val(sum);
+  function passvalues() {
+    var firstname = document.getElementById("txt").value;
+    localStorage.setItem("textvalue", firstname)
+    return false
+  }
+
+  function saveData() {
+    // var name = document.getElementById("datepicker").value;
+    var ticketnumber = document.getElementById("ticketnumber").value;
+    console.log(ticketnumber);
+    sessionStorage.setItem("ticketnumber", ticketnumber);
+
+    var time = document.getElementById("time").value;
+    console.log(time);
+    sessionStorage.setItem("time", time);
+
+    location.href = 'booking2.html';
+
+  }
+
+
+  (function($) {
+    $('.spinner .btn-1').on('click', function() {
+      if (parseInt($('.spinner input').val(), 10) > 0)
+        $('.spinner input').val(parseInt($('.spinner input').val(), 10) - 1);
+    });
+    $('.spinner .btn-2').on('click', function() {
+      $('.spinner input').val(parseInt($('.spinner input').val(), 10) + 1);
+    });
+  })(jQuery);
+
+  (function($) {
+    $('.spinner2 .btn-3').on('click', function() {
+      if (parseInt($('.spinner2 input').val(), 10) > 0)
+        $('.spinner2 input').val(parseInt($('.spinner2 input').val(), 10) - 1);
+    });
+    $('.spinner2 .btn-4').on('click', function() {
+      $('.spinner2 input').val(parseInt($('.spinner2 input').val(), 10) + 1);
+    });
+  })(jQuery);
+
+  (function($) {
+    $("#submit").on("click", function() {
+      var a = parseInt($('.spinner input').val());
+      var b = parseInt($('.spinner2 input').val());
+      var sum = a + b;
+      $('#sum').val(sum);
 
     })
-})(jQuery);
-
-
+  })(jQuery);
 </script>
